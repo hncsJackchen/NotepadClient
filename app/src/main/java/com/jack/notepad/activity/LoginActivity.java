@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import com.alibaba.fastjson.JSON;
+import com.jack.notepad.BaseApplication;
 import com.jack.notepad.R;
 import com.jack.notepad.bean.User;
 import com.jack.notepad.response.HttpCallback;
@@ -86,9 +87,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             public void onSuccess(ResponseResult response) {
                 if (response.getStatus() == ResponseResult.STATUS_SUCCESS) {
                     User user = JSON.parseObject(response.getResult().toString(), User.class);
+                    //设置为全局变量
+                    BaseApplication.getInstance().setUser(user);
                     Log.w(TAG, response.getError_msg() + " " + user);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    intent.putExtra("data", "登录成功"+JSON.toJSONString(user));
+                    intent.putExtra("data", user);
                     startActivity(intent);
                     finish();
                 } else {

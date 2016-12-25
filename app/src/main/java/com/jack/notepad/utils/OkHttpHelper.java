@@ -27,17 +27,6 @@ public class OkHttpHelper {
     private static final OkHttpClient okClient = new OkHttpClient();
     private static final Handler handler = new Handler(Looper.getMainLooper());
 
-    public static void testHttp(HttpCallback callback) {
-        //url
-        String url = "http://192.168.1.197:8080/user/login";
-        //参数
-        HashMap<String, String> map = new HashMap<>();
-        map.put("userName", "hncschen");
-        map.put("password", "123456");
-        //请求
-        request(url, map, callback);
-    }
-
     /**
      * 对外接口
      *

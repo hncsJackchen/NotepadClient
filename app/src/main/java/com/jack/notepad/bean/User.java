@@ -1,10 +1,12 @@
 package com.jack.notepad.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2016/11/19.
  * 用户信息类
  */
-public class User {
+public class User implements Serializable {
     private int uid;
     private String userName;
     private String password;

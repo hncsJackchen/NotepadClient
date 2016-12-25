@@ -2,6 +2,8 @@ package com.jack.notepad;
 
 import android.app.Application;
 
+import com.jack.notepad.bean.User;
+
 /**
  * Author： Jackchen
  * Time： 2016/11/22
@@ -9,6 +11,7 @@ import android.app.Application;
  */
 public class BaseApplication extends Application {
     private static BaseApplication instance;
+    private User user;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -25,5 +28,13 @@ public class BaseApplication extends Application {
     
     public static BaseApplication getInstance(){
         return instance;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

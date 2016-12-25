@@ -6,11 +6,29 @@
     tools:context=".activity.MainActivity">
 
     <TextView
-        android:id="@+id/tv_main_content"
+        android:id="@+id/tv_main_no_data"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="没有数据"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_main_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/iv_main_edit"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="主界面" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"
+        android:src="@mipmap/ic_launcher" />
 
 
 </RelativeLayout>

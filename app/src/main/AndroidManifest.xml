@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.jack.notepad"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jack.notepad">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -19,14 +19,13 @@
             </intent-filter>
         </activity>
 
-        <!--登录界面-->
+        <!-- 登录界面 -->
         <activity android:name=".activity.LoginActivity" />
-        <!--注册界面-->
-        <activity android:name=".activity.RegisterActivity"></activity>
-        <!--主界面-->
+        <!-- 注册界面 -->
+        <activity android:name=".activity.RegisterActivity" />
+        <!-- 主界面 -->
         <activity android:name=".activity.MainActivity" />
-        
-        
+        <activity android:name=".activity.EditNotepadActivity"></activity>
     </application>
 
 </manifest>
